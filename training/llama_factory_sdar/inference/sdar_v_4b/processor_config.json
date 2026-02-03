@@ -1,0 +1,8 @@
+{
+  "image_token": "<|image_pad|>",
+  "num_image_tokens": 729,
+  "processor_class": "LlavaOnevisionProcessor",
+  "video_token": "<|video_pad|>",
+  "vision_aspect_ratio": "anyres_max_9",
+  "vision_feature_select_strategy": "full"
+}

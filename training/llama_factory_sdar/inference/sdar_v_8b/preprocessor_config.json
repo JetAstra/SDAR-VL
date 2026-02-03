@@ -1,0 +1,178 @@
+{
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": false,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_grid_pinpoints": [
+    [
+      384,
+      384
+    ],
+    [
+      384,
+      768
+    ],
+    [
+      384,
+      1152
+    ],
+    [
+      384,
+      1536
+    ],
+    [
+      384,
+      1920
+    ],
+    [
+      384,
+      2304
+    ],
+    [
+      768,
+      384
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768,
+      1152
+    ],
+    [
+      768,
+      1536
+    ],
+    [
+      768,
+      1920
+    ],
+    [
+      768,
+      2304
+    ],
+    [
+      1152,
+      384
+    ],
+    [
+      1152,
+      768
+    ],
+    [
+      1152,
+      1152
+    ],
+    [
+      1152,
+      1536
+    ],
+    [
+      1152,
+      1920
+    ],
+    [
+      1152,
+      2304
+    ],
+    [
+      1536,
+      384
+    ],
+    [
+      1536,
+      768
+    ],
+    [
+      1536,
+      1152
+    ],
+    [
+      1536,
+      1536
+    ],
+    [
+      1536,
+      1920
+    ],
+    [
+      1536,
+      2304
+    ],
+    [
+      1920,
+      384
+    ],
+    [
+      1920,
+      768
+    ],
+    [
+      1920,
+      1152
+    ],
+    [
+      1920,
+      1536
+    ],
+    [
+      1920,
+      1920
+    ],
+    [
+      1920,
+      2304
+    ],
+    [
+      2304,
+      384
+    ],
+    [
+      2304,
+      768
+    ],
+    [
+      2304,
+      1152
+    ],
+    [
+      2304,
+      1536
+    ],
+    [
+      2304,
+      1920
+    ],
+    [
+      2304,
+      2304
+    ]
+  ],
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_processor_type": "LlavaOnevisionImageProcessorFast",
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "input_data_format": null,
+  "processor_class": "LlavaOnevisionProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "height": 384,
+    "width": 384
+  }
+}

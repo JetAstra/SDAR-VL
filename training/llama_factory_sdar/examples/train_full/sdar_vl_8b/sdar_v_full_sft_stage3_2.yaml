@@ -1,0 +1,70 @@
+### model
+model_name_or_path: /mnt/shared-storage-user/dllm-share/chengshuang/sdar_v_ckpt/sdar_v_8b_p_rectify_scheduler_from_scratch/sdar_v_stage3_1
+train_from_scratch: false
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+freeze_vision_tower: false
+freeze_multi_modal_projector: false
+freeze_language_model: false
+deepspeed: examples/deepspeed/ds_z2_config.json
+# pure_bf16: true
+# disable_gradient_checkpointing: true
+# gradient_checkpointing: true
+
+### dataset
+# dataset: mllm_demo,identity,alpaca_en_demo
+dataset: mammoth_ov_2M,visual_web_instruct_mixed_conversation
+media_dir: /mnt/shared-storage-user/chengshuang/projects/dataset/MAmmoTH-VL-Instruct-12M/images
+template: sdar_v # qwen2_vl
+video_maxlen: 64
+block_length: 4
+cutoff_len: 16384
+truncate_mode: drop # choices: [drop, cut] 多模态推荐 drop
+# max_samples: 200
+overwrite_cache: false
+tokenized_path: /mnt/shared-storage-user/chengshuang/projects/dataset/VisualWebInstruct/tokenized_sdar_v_mammoth_ov_2M_and_visual_web_instruct_packlen_16384
+preprocessing_num_workers: 96
+dataloader_num_workers: 16
+neat_packing: true
+# streaming: true
+# max_steps: 1000
+
+### output
+output_dir: /mnt/shared-storage-user/dllm-share/chengshuang/sdar_v_ckpt/sdar_v_8b_p_rectify_scheduler_from_scratch/sdar_v_stage3_2
+# output_dir: saves/test
+logging_steps: 10
+save_steps: 2000
+save_total_limit: 6
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: tensorboard  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+run_name: sdar_v_8b_p_rectify_from_scratch_stage_3_2
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 1
+learning_rate: 1.0e-5
+mm_vision_tower_lr: 2.0e-6
+mm_projector_lr: 1.0e-5
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+noise_scheduler_type: beta # uniform, beta
+scheduler_warmup_steps: 10603 # 总的 step 数，update x accu
+scheduler_target_mean: 0.8
+scheduler_start_C: 2.0
+scheduler_end_C: 50.0
+
+### eval
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500
