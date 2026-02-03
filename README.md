@@ -5,10 +5,10 @@
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)  [![HuggingFace: Models](https://img.shields.io/badge/HuggingFace-Models-yellow)](https://huggingface.co/collections/JetLM/sdar-vl) [![Technical Report: Arxiv](https://img.shields.io/badge/Technical%20Report-Arxiv-red)](https://arxiv.org/abs/2510.06303)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)  [![HuggingFace: Models](https://img.shields.io/badge/HuggingFace-Models-yellow)](https://huggingface.co/collections/JetLM/sdar-vl) [![Paper: Arxiv](https://img.shields.io/badge/Technical%20Report-Arxiv-red)](https://arxiv.org/abs/2512.14068)
 
 </div>
-
+sdar
 ## 🔍 Overview
 
 **SDAR-VL** is the first large-scale **block-wise discrete diffusion** framework for **vision-language understanding (VLU)**.  
